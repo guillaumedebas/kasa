@@ -1,0 +1,22 @@
+.location-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: clamp(0px, 3.125vw, 60px);
+    grid-row-gap: clamp(0px, 2.604vw, 50px);
+    padding: clamp(0px, 2.604vw, 50px);
+    background-color: #F6F6F6;
+    border-radius: 25px;
+    position: relative;
+
+    @media screen and (max-width: 768px) {
+        grid-template-columns: 1fr 1fr;
+        grid-row-gap: 5.333vw;
+    }
+
+    @media screen and (max-width: 480px) {
+        grid-template-columns: 1fr;
+        background: none;
+        padding: 0;
+        padding-top: clamp(0px, 2.604vw, 50px);
+    }
+}

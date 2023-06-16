@@ -1,0 +1,15 @@
+.footer {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 60px;
+
+    &__text {
+        color: white;
+        font-size: clamp(0.75rem, 1.25vw, 1.5rem);
+    }
+}
+

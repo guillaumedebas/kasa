@@ -1,0 +1,34 @@
+@import './settings.scss';
+
+.housing {
+    flex-basis: 80%;
+    justify-content: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    &__title {
+    @include default-text(2.25rem);
+}
+
+&__location {
+    @include default-text(1.125rem);
+}
+
+&__tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    
+    &__item {
+         background-color: $main-color;
+         padding: 2px 30px;
+         aspect-ratio: 115 / 25;
+         color: white;
+         font-size: 0.875rem;
+         border-radius: 10px;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+     }
+ }
+}

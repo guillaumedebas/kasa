@@ -1,0 +1,7 @@
+$main-color: #FF6060;
+
+@mixin default-text($fontSize) {
+    font-size: $fontSize;
+    color: $main-color;
+}
+

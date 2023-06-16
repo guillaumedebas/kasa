@@ -1,0 +1,9 @@
+.rating {
+    display: flex;
+    justify-content: flex-end;
+    gap: clamp(6.5px, 0.781vw, 15px);
+    &__star {
+        height: clamp(13px, 1.25vw, 24px);
+
+    }
+}

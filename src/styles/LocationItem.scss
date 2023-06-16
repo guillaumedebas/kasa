@@ -1,0 +1,36 @@
+.location {
+    aspect-ratio: 1/1;
+    border-radius: 10px;
+    display: flex;
+    align-items: flex-end;
+    padding: clamp(0px,  1.042vw , 20px);
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+
+    &__background {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+    }
+
+    &__title {
+        color: white;
+        z-index: 2;
+    }
+}
+
+
+
