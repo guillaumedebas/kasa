@@ -4,8 +4,9 @@ import "./styles/index.scss"
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import Header from "./components/header"
 import Footer from "./components/Footer"
-import Accueil from "./Pages/Accueil/Accueil"
-import APropos from "./Pages/APropos/APropos"
+import Accueil from "./Pages/Accueil"
+import APropos from "./Pages/APropos"
+import RentalSheetPage from "./Pages/RentalSheetPage"
 
 const root = ReactDOM.createRoot(document.getElementById("root"))
 root.render(
@@ -15,6 +16,8 @@ root.render(
       <Routes>
         <Route path="/" element={<Accueil />} />
         <Route path="/a-propos" element={<APropos />} />
+        RentalSheetPage
+        <Route path="/RentalSheetPage/:id" element={<RentalSheetPage />} />
       </Routes>
       <Footer />
     </Router>

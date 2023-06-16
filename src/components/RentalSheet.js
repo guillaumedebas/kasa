@@ -1,12 +1,24 @@
-import "../styles/RentalSheet.scss";
-import Carousel from "./Carousel";
-import MainRentalInformation from "./MainRentalInformation";
-import HostInformation from "./HostInformation";
-import { LogementList } from "../datas/LogementList";
-import Dropdown from "./Dropdown";
+import "../styles/RentalSheet.scss"
+import Carousel from "./Carousel"
+import MainRentalInformation from "./MainRentalInformation"
+import HostInformation from "./HostInformation"
+import { LogementList } from "../datas/LogementList"
+import Dropdown from "./Dropdown"
+import { useParams } from "react-router-dom"
+
+function searchNumber(id) {
+  for (let i = 0; i < LogementList.length; i++) {
+    if (LogementList[i].id === id) {
+      return i
+    }
+  }
+  return -1 // Si l'ID n'est pas trouvé dans la liste
+}
 
 function RentalSheet() {
-  const sheet = 10;
+  const { id } = useParams()
+
+  const sheet = searchNumber(id)
   return (
     <div>
       <Carousel sheet={sheet} />
@@ -28,9 +40,9 @@ function RentalSheet() {
           <Dropdown
             dropdownLabel={"Équipements"}
             content={
-              <ul className="dropdown__content">
+              <ul>
                 {LogementList[sheet].equipments.map((equipement, id) => (
-                  <li key={id} className="dropdown__content__item">
+                  <li key={id} className="dropdown__hidden-box__item">
                     {equipement}
                   </li>
                 ))}
@@ -40,7 +52,7 @@ function RentalSheet() {
         </div>
       </section>
     </div>
-  );
+  )
 }
 
-export default RentalSheet;
+export default RentalSheet

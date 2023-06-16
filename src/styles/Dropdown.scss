@@ -32,18 +32,23 @@
         transition: height 800ms;
         height: 0px;
         background-color: #F6F6F6;
-        *, &--open {
+
+        *,
+        &--open {
             z-index: -1;
             @include default-text(1.125rem);
             font-weight: 400;
             padding: 20px;
-            line-height: 1.2rem;       
-            
+            line-height: 1.2rem;
+
+
         }
-            &__item {
-                line-height: 1.6rem;
-            }
-            
+
+        &__item {
+            line-height: 1.6rem;
+
+        }
+
         &--open {
             height: calc(130px - 3vw);
             transition: height 800ms;
@@ -51,10 +56,12 @@
             background-color: #F6F6F6;
             display: flex;
             align-content: flex-end;
+
             * {
                 display: flex;
-               align-items: center;
-               height: auto;
+                flex-direction: column;
+                justify-content: center;
+                height: auto;
             }
         }
     }
