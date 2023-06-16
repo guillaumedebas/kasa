@@ -19,7 +19,12 @@ code {
   padding-top: clamp(0px, 2.083vw, 40px);
 }
 
-.header, .banner, .location-list, .rental-sheet, .carousel, .a-propos {
+.header,
+.banner,
+.rental-list,
+.rental-sheet,
+.carousel,
+.a-propos {
   margin-right: clamp(0px, 5.208vw, 100px);
   margin-left: clamp(0px, 5.208vw, 100px);
   margin-bottom: clamp(0px, 2.083vw, 40px);

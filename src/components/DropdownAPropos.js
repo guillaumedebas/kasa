@@ -2,7 +2,7 @@ import "../styles/APropos.scss"
 import Dropdown from "./Dropdown"
 import { AProposData } from "../datas/AProposData"
 
-function APropos() {
+function DropdownAPropos() {
   return (
     <section className="a-propos">
       <Dropdown
@@ -29,4 +29,4 @@ function APropos() {
   )
 }
 
-export default APropos
+export default DropdownAPropos

@@ -2,10 +2,10 @@ import React from "react"
 import ReactDOM from "react-dom/client"
 import "./styles/index.scss"
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
-import App from "./components/App"
-import APropos from "./components/APropos"
 import Header from "./components/header"
 import Footer from "./components/Footer"
+import Accueil from "./Pages/Accueil/Accueil"
+import APropos from "./Pages/APropos/APropos"
 
 const root = ReactDOM.createRoot(document.getElementById("root"))
 root.render(
@@ -13,7 +13,7 @@ root.render(
     <Router>
       <Header />
       <Routes>
-        <Route path="/" element={<App />} />
+        <Route path="/" element={<Accueil />} />
         <Route path="/a-propos" element={<APropos />} />
       </Routes>
       <Footer />
