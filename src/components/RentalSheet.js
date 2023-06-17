@@ -9,7 +9,7 @@ import HostIdentity from "./HostIdentity"
 function RentalSheet({ sheet }) {
   return (
     <div>
-      <Carousel sheet={sheet} />
+      <Carousel pictures={LogementList[sheet].pictures} />
 
       <section className="rental-sheet">
         <div className="rental-sheet__overview">
