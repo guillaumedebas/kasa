@@ -1,23 +1,27 @@
-import dropdownHandle from "../assets/dropdown-handle.svg";
-import "../styles/Dropdown.scss";
-import { useState } from "react";
-
-
+import dropdownHandle from "../assets/dropdown-handle.svg"
+import "../styles/Dropdown.scss"
+import { useState } from "react"
 
 function Dropdown({ dropdownLabel, content }) {
-  const [classNameSuffixValue, modifyClassNameSuffixValue] = useState("");
-  const [isOpen, modifyOpen] = useState(false);
-  const display = <div className={`dropdown__hidden-box${classNameSuffixValue}`}>
-  {content}
-</div>
+  const [classNameSuffixValue, modifyClassNameSuffixValue] = useState("")
+  const [isOpen, modifyOpen] = useState(false)
+  const display = (
+    <div className={`dropdown__hidden-box${classNameSuffixValue}`}>
+      {content}
+    </div>
+  )
 
- function dropdownRotate() {
+  function dropdownRotate() {
     if (classNameSuffixValue === "") {
       modifyOpen(true)
-      setTimeout(() => {modifyClassNameSuffixValue("--open")}, 601)
-      } else {
-      modifyClassNameSuffixValue("");
-      setTimeout(() => {modifyOpen(false)}, 601)
+      setTimeout(() => {
+        modifyClassNameSuffixValue("--open")
+      }, 601)
+    } else {
+      modifyClassNameSuffixValue("")
+      setTimeout(() => {
+        modifyOpen(false)
+      }, 601)
     }
   }
 
@@ -34,7 +38,7 @@ function Dropdown({ dropdownLabel, content }) {
       </div>
       {isOpen && display}
     </div>
-  );
+  )
 }
 
-export default Dropdown;
+export default Dropdown

@@ -32,13 +32,25 @@ function RentalSheet({ sheet }) {
           <Dropdown
             dropdownLabel={"Équipements"}
             content={
-              <ul>
-                {LogementList[sheet].equipments.map((equipement, id) => (
-                  <li key={id} className="dropdown__hidden-box__item">
-                    {equipement}
-                  </li>
-                ))}
-              </ul>
+              <div className="dropdown__hidden-box__item">
+                <ul>
+                  {LogementList[sheet].equipments
+                    .slice(0, 5)
+                    .map((equipement, id) => (
+                      <li key={id}>{equipement}</li>
+                    ))}
+                </ul>
+
+                {LogementList[sheet].equipments.length > 5 && (
+                  <ul>
+                    {LogementList[sheet].equipments
+                      .slice(5)
+                      .map((equipement, id) => (
+                        <li key={id}>{equipement}</li>
+                      ))}
+                  </ul>
+                )}
+              </div>
             }
           />
         </div>
