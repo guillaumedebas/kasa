@@ -4,21 +4,8 @@ import MainRentalInformation from "./MainRentalInformation"
 import HostInformation from "./HostInformation"
 import { LogementList } from "../datas/LogementList"
 import Dropdown from "./Dropdown"
-import { useParams } from "react-router-dom"
 
-function searchNumber(id) {
-  for (let i = 0; i < LogementList.length; i++) {
-    if (LogementList[i].id === id) {
-      return i
-    }
-  }
-  return -1 // Si l'ID n'est pas trouvé dans la liste
-}
-
-function RentalSheet() {
-  const { id } = useParams()
-
-  const sheet = searchNumber(id)
+function RentalSheet({ sheet }) {
   return (
     <div>
       <Carousel sheet={sheet} />

@@ -1,0 +1,26 @@
+@import './settings.scss';
+
+.error {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    justify-content: space-around;
+    align-items: center;
+    padding: 139px;
+
+    &__type {
+        @include default-text(18rem);
+    }
+
+    &__message {
+        @include default-text(2.25rem);
+    }
+
+    &__link {
+        @include default-text(1.125rem);
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
