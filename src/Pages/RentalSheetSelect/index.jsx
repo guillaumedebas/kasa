@@ -1,7 +1,7 @@
 import RentalSheet from "../../components/RentalSheet"
 import { useParams } from "react-router-dom"
 import { LogementList } from "../../datas/LogementList"
-import Error from "../../components/Error/"
+import Error from "../../components/Error"
 
 function searchRental(id) {
   for (let i = 0; i < LogementList.length; i++) {
@@ -12,7 +12,7 @@ function searchRental(id) {
   return -1
 }
 
-function RentalSheetPage() {
+function RentalSheetSelect() {
   const { id } = useParams()
   const sheet = searchRental(id)
 
@@ -27,4 +27,4 @@ function RentalSheetPage() {
   )
 }
 
-export default RentalSheetPage
+export default RentalSheetSelect

@@ -3,11 +3,24 @@
         display: flex;
         justify-content: space-between;
         align-items: flex-end;
+
         @media screen and (max-width: 480px) {
             flex-direction: column;
             align-items: flex-start;
         }
+    }
 
+    &__host {
+        display: flex;
+        flex-direction: column;
+        margin-top: 10px;
+
+        @media screen and (max-width: 480px) {
+            width: 100%;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            align-items: center;
+        }
     }
 
     &__detail {

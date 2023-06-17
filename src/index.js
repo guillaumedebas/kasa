@@ -6,7 +6,7 @@ import Header from "./components/header"
 import Footer from "./components/Footer"
 import Accueil from "./Pages/Accueil"
 import APropos from "./Pages/APropos"
-import RentalSheetPage from "./Pages/RentalSheetPage"
+import RentalSheetSelect from "./Pages/RentalSheetSelect"
 import Error from "./components/Error"
 
 const root = ReactDOM.createRoot(document.getElementById("root"))
@@ -17,9 +17,9 @@ root.render(
       <Routes>
         <Route path="/" element={<Accueil />} />
         <Route path="/a-propos" element={<APropos />} />
-        <Route path="/RentalSheetPage/:id" element={<RentalSheetPage />} />
+        <Route path="/RentalSheetSelect/:id" element={<RentalSheetSelect />} />
         <Route path="*" element={<Error />} />
-        <Route path="/RentalSheetPage/*" element={<Error />} />
+        <Route path="/RentalSheetSelect/*" element={<Error />} />
       </Routes>
       <Footer />
     </Router>

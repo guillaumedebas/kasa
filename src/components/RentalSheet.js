@@ -1,9 +1,10 @@
 import "../styles/RentalSheet.scss"
 import Carousel from "./Carousel"
 import MainRentalInformation from "./MainRentalInformation"
-import HostInformation from "./HostInformation"
 import { LogementList } from "../datas/LogementList"
 import Dropdown from "./Dropdown"
+import RatingScale from "./RatingScale"
+import HostIdentity from "./HostIdentity"
 
 function RentalSheet({ sheet }) {
   return (
@@ -13,8 +14,12 @@ function RentalSheet({ sheet }) {
       <section className="rental-sheet">
         <div className="rental-sheet__overview">
           <MainRentalInformation sheet={sheet} />
-          <HostInformation sheet={sheet} />
+          <div className="rental-sheet__host">
+            <HostIdentity sheet={sheet} />
+            <RatingScale scaleValue={LogementList[sheet].rating} />
+          </div>
         </div>
+
         <div className="rental-sheet__detail">
           <Dropdown
             dropdownLabel={"Description"}

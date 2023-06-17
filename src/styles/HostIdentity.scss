@@ -1,0 +1,21 @@
+@import './settings.scss';
+
+.identity {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    align-items: center;
+
+    &__name {
+        @include default-text(1.125rem);
+        max-width: 10ch;
+        text-align: end;
+
+    }
+
+    &__picture {
+        width: clamp(32px, 3.333vw, 64px);
+        aspect-ratio: 1/1;
+        border-radius: 50%;
+    }
+}
