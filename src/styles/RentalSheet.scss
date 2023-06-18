@@ -1,6 +1,10 @@
 @import './settings.scss';
 
 .rental-sheet {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(15px, 1.30vw, 25px);
+
     &__overview {
         display: flex;
         justify-content: space-between;
@@ -15,7 +19,7 @@
     &__host {
         display: flex;
         flex-direction: column;
-        margin-top: 10px;
+        gap: clamp(15px, 1.30vw, 25px);
 
         @media screen and (max-width: 480px) {
             width: 100%;
@@ -28,7 +32,8 @@
     &__detail {
         display: flex;
         gap: clamp(20px, 3.958vw, 76px);
-        margin-top: 10px;
+
+
 
         @media screen and (max-width: 768px) {
             flex-direction: column;
@@ -42,10 +47,11 @@
     justify-content: flex-start;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: clamp(10px, 1vw, 20px);
 
     &__title {
         @include default-text(2.25rem);
+        font-weight: 500;
     }
 
     &__location {
