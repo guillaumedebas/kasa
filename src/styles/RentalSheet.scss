@@ -3,7 +3,8 @@
 .rental-sheet {
     display: flex;
     flex-direction: column;
-    gap: clamp(15px, 1.30vw, 25px);
+    gap: clamp(15px, 1.736vw, 25px);
+    box-sizing: border-box;
 
     &__overview {
         display: flex;
@@ -13,13 +14,14 @@
         @media screen and (max-width: 480px) {
             flex-direction: column;
             align-items: flex-start;
+            gap: 15px;
         }
     }
 
     &__host {
         display: flex;
         flex-direction: column;
-        gap: clamp(15px, 1.30vw, 25px);
+        gap: clamp(15px, 1.736vw, 25px);
 
         @media screen and (max-width: 480px) {
             width: 100%;
@@ -31,7 +33,7 @@
 
     &__detail {
         display: flex;
-        gap: clamp(20px, 3.958vw, 76px);
+        gap: clamp(20px, 5.278vw, 76px);
 
 
 
@@ -47,14 +49,17 @@
     justify-content: flex-start;
     display: flex;
     flex-direction: column;
-    gap: clamp(10px, 1vw, 20px);
+    gap: clamp(10px, 1.389vw, 20px);
 
     &__title {
-        @include default-text(2.25rem);
+        color: $main-color;
+        font-size: clamp(1.125rem, 2.5vw, 2.25rem);
         font-weight: 500;
     }
 
     &__location {
-        @include default-text(1.125rem);
+        color: $main-color;
+        font-size: clamp(0.875rem, 1.25vw, 1.125rem);
+        font-weight: 500;
     }
 }

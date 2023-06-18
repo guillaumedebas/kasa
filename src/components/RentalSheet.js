@@ -4,7 +4,7 @@ import { LogementList } from "../datas/LogementList"
 import Dropdown from "./Dropdown"
 import RatingScale from "./RatingScale"
 import HostIdentity from "./HostIdentity"
-import Taglist from "./Taglist"
+import TagList from "./TagList"
 
 function RentalSheet({ sheet }) {
   return (
@@ -16,7 +16,7 @@ function RentalSheet({ sheet }) {
           <div className="housing">
             <h2 className="housing__title">{LogementList[sheet].title}</h2>
             <p className="housing__location">{LogementList[sheet].location}</p>
-            <Taglist sheet={sheet} />
+            <TagList sheet={sheet} />
           </div>
           <div className="rental-sheet__host">
             <HostIdentity sheet={sheet} />

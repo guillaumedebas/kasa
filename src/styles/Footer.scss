@@ -6,10 +6,12 @@
     align-items: center;
     gap: 30px;
     padding: 60px;
+    flex-grow: 1;
+
 
     &__text {
         color: white;
-        font-size: clamp(0.75rem, 1.25vw, 1.5rem);
+        font-size: clamp(0.75rem, 1.667vw, 1.5rem);
+        font-weight: 500;
     }
 }
-

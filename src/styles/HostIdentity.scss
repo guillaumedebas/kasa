@@ -7,14 +7,16 @@
     align-items: center;
 
     &__name {
-        @include default-text(1.125rem);
+        color: $main-color;
+        font-size: clamp(0.75rem, 1.25vw, 1.125rem);
+        font-weight: 500;
         max-width: 10ch;
         text-align: end;
 
     }
 
     &__picture {
-        width: clamp(32px, 3.333vw, 64px);
+        width: clamp(32px, 4.444vw, 64px);
         aspect-ratio: 1/1;
         border-radius: 50%;
     }

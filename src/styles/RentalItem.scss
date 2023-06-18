@@ -3,7 +3,7 @@
     border-radius: 10px;
     display: flex;
     align-items: flex-end;
-    padding: clamp(0px, 1.042vw, 20px);
+    padding: clamp(0px, 1.389vw, 20px);
     box-sizing: border-box;
     position: relative;
     overflow: hidden;
@@ -27,7 +27,13 @@
     }
 
     &__title {
+        font-size: clamp(0.875rem, 1.25vw, 1.125rem);
+        font-weight: 500;
         color: white;
         z-index: 2;
+
+        @media screen and (max-width: 480px) {
+            font-size: 1.125rem;
+        }
     }
 }

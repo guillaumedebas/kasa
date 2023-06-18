@@ -16,7 +16,13 @@ code {
 }
 
 .main-wrapper {
-  padding-top: clamp(0px, 2.083vw, 40px);
+  padding-top: clamp(20px, 3.125vw, 45px);
+  position: relative;
+  min-height: 97.5vh;
+  display: flex;
+  flex-direction: column;
+
+
 }
 
 .header,
@@ -25,9 +31,9 @@ code {
 .rental-sheet,
 .carousel,
 .a-propos {
-  margin-right: clamp(0px, 5.208vw, 100px);
-  margin-left: clamp(0px, 5.208vw, 100px);
-  margin-bottom: clamp(0px, 2.083vw, 40px);
+  margin-right: clamp(0px, 6.944vw, 100px);
+  margin-left: clamp(0px, 6.944vw, 100px);
+  margin-bottom: clamp(0px, 2.778vw, 40px);
 }
 
 * {

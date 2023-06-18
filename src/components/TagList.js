@@ -1,7 +1,7 @@
 import { LogementList } from "../datas/LogementList"
-import "../styles/Taglist.scss"
+import "../styles/TagList.scss"
 
-function Taglist({ sheet }) {
+function TagList({ sheet }) {
   return (
     <ul className="tag-list">
       {LogementList[sheet].tags.map((tag, id) => (
@@ -13,4 +13,4 @@ function Taglist({ sheet }) {
   )
 }
 
-export default Taglist
+export default TagList

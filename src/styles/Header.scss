@@ -2,30 +2,27 @@
 
 .navbar {
   display: flex;
-  gap: clamp(10px, 2.969vw, 57px);
+  gap: clamp(26px, 3.958vw, 57px);
   list-style-type: none;
   align-items: center;
   padding: 0px;
   margin: 0;
+
   .navbar__logo {
     margin-right: auto;
   }
+
   &__link {
     color: $main-color;
     text-decoration: none;
-    font-size: clamp(0.75rem, 1.25vw, 1.5rem);
+    font-size: clamp(0.75rem, 1.667vw, 1.5rem);
+
     &:hover {
       text-decoration: underline;
     }
   }
+
   &__logo__svg {
-    height: clamp(43px, 3.229vw, 62px);
+    height: clamp(43px, 4.306vw, 62px);
   }
 }
-
-
-
-
-
-
-

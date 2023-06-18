@@ -7,14 +7,14 @@
 
     &__item {
         background-color: $main-color;
-        padding: clamp(3px, 0.26vw, 5px) clamp(10px, 1.042vw, 20px);
-        aspect-ratio: 115 / 25;
+        padding: 5px clamp(25px, 2vw, 30px);
         color: white;
-        font-size: clamp(0.625rem, 0.729vw, 0.875rem);
-        border-radius: 10px;
-        box-sizing: border-box;
+        font-size: clamp(0.625rem, 0.972vw, 0.875rem);
+        border-radius: clamp(5px, 0.694vw, 10px);
         display: flex;
         align-items: center;
         justify-content: center;
+
+
     }
 }

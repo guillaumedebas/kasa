@@ -9,15 +9,21 @@
     padding: 139px;
 
     &__type {
-        @include default-text(18rem);
+        font-size: clamp(6rem, 20vw, 18rem);
+        color: $main-color;
+        font-weight: 700;
     }
 
     &__message {
-        @include default-text(2.25rem);
+        font-size: clamp(1.125rem, 2.5vw, 2.25rem);
+        color: $main-color;
+        font-weight: 500;
     }
 
     &__link {
-        @include default-text(1.125rem);
+        font-size: clamp(0.875rem, 1.25vw, 1.125rem);
+        color: $main-color;
+        font-weight: 500;
 
         &:hover {
             text-decoration: underline;
