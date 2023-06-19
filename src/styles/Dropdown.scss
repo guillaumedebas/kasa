@@ -4,6 +4,13 @@
     width: 100%;
     overflow: hidden;
     height: auto;
+    border-radius: 10px;
+
+    &__background {
+        &--open {
+            background-color: #F6F6F6;
+        }
+    }
 
 
     &__title {
@@ -51,12 +58,12 @@
         }
 
         &--open {
-            height: calc(250px - 5vw);
+            height: 116px;
             transition: height 600ms;
             position: relative;
             background-color: #F6F6F6;
             display: flex;
-            z-index: -1;
+            z-index: 9;
             color: $main-color;
             font-size: clamp(0.75rem, 1.25vw, 1.125rem);
             font-weight: 400;
@@ -64,11 +71,11 @@
             line-height: 1.2rem;
 
             @media screen and (max-width: 768px) {
-                height: calc(300px - 23vw)
+                height: 70px;
             }
 
             @media screen and (max-width: 480px) {
-                height: calc(500px - 58.3vw)
+                height: 150px;
             }
 
             * {
@@ -76,6 +83,7 @@
                 transform: translateY(0px);
                 z-index: -1;
                 align-self: center;
+
             }
 
             ul {

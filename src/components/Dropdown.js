@@ -27,16 +27,18 @@ function Dropdown({ dropdownLabel, content }) {
 
   return (
     <div className="dropdown">
-      <div className="dropdown__title">
-        <p className="dropdown__title__label">{dropdownLabel}</p>
-        <img
-          src={dropdownHandle}
-          onClick={dropdownRotate}
-          alt="dropdown-handle"
-          className={`dropdown__title__handle${classNameSuffixValue}`}
-        />
+      <div className={`dropdown__background${classNameSuffixValue}`}>
+        <div className="dropdown__title">
+          <p className="dropdown__title__label">{dropdownLabel}</p>
+          <img
+            src={dropdownHandle}
+            onClick={dropdownRotate}
+            alt="dropdown-handle"
+            className={`dropdown__title__handle${classNameSuffixValue}`}
+          />
+        </div>
+        {isOpen && display}
       </div>
-      {isOpen && display}
     </div>
   )
 }
