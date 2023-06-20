@@ -4,7 +4,7 @@
     width: 100%;
     overflow: hidden;
     height: auto;
-    border-radius: 10px;
+    border-radius: 5px;
 
     &__background {
         &--open {
@@ -15,12 +15,14 @@
 
     &__title {
         background-color: $main-color;
+        height: clamp(30px, 3.611vw, 52px);
         display: flex;
-        border-radius: 10px;
-        padding: 10px;
+        align-items: center;
+        border-radius: 5px;
+        padding: clamp(10px, 1.042vw, 15px);
         justify-content: space-between;
         z-index: 10;
-
+        box-sizing: border-box;
 
         &__label {
             color: white;
@@ -30,8 +32,10 @@
         &__handle {
             width: clamp(16px, 1.667vw, 24px);
             transition: transform 600ms;
+            margin: clamp(2px, 0.625vw, 9px);
 
             &--open {
+                margin: clamp(2px, 0.625vw, 9px);
                 transition: transform 600ms;
                 transform: rotate(-180deg);
                 width: clamp(16px, 1.667vw, 24px);
