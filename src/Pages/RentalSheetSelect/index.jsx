@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom"
+import { useNavigate, useParams } from "react-router-dom"
 import { LogementList } from "../../datas/LogementList"
 import "../../styles/RentalSheet.scss"
 import Dropdown from "../../components/Dropdown"
@@ -6,6 +6,7 @@ import RatingScale from "../../components/RatingScale"
 import HostIdentity from "../../components/HostIdentity"
 import TagList from "../../components/TagList"
 import Gallery from "../../components/Gallery"
+import React, { useEffect } from "react"
 
 function searchRental(id) {
   for (let i = 0; i < LogementList.length; i++) {
@@ -18,7 +19,18 @@ function searchRental(id) {
 
 function RentalSheetSelect() {
   const { id } = useParams()
+  const navigate = useNavigate()
   const sheet = searchRental(id)
+
+  useEffect(() => {
+    if (sheet === -1) {
+      navigate("/error")
+    }
+  }, [navigate, sheet])
+
+  if (sheet === -1) {
+    return null // Retourne null si la navigation est effectuée vers le composant Error
+  }
 
   return (
     <main>
