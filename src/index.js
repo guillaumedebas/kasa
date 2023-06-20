@@ -12,7 +12,7 @@ import Footer from "./components/Footer"
 import Accueil from "./Pages/Accueil"
 import APropos from "./Pages/APropos"
 import RentalSheetSelect from "./Pages/RentalSheetSelect"
-import Error from "./components/Error"
+import Error from "./Pages/Error"
 import { LogementList } from "./datas/LogementList"
 
 const root = ReactDOM.createRoot(document.getElementById("root"))

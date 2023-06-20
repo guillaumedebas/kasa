@@ -4,11 +4,11 @@ import RentalItem from "./RentalItem"
 
 function RentalList() {
   return (
-    <div key="RentalList" className="rental-list">
+    <section key="RentalList" className="rental-list">
       {LogementList.map(({ id, title, cover }) => (
         <RentalItem key={id} title={title} cover={cover} id={id} />
       ))}
-    </div>
+    </section>
   )
 }
 
