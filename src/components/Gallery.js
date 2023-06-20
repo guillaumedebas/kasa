@@ -1,7 +1,7 @@
 import React, { useState } from "react"
-import "../styles/Carousel.scss"
+import "../styles/Gallery.scss"
 
-const Carousel = ({ pictures }) => {
+const Gallery = ({ pictures, slogan, banner }) => {
   const [currentItem, setCurrentItem] = useState(0)
 
   const next = () => {
@@ -14,45 +14,45 @@ const Carousel = ({ pictures }) => {
 
   if (pictures.length === 1) {
     return (
-      <div className="carousel">
-        <div className="carousel__container">
+      <div className={`gallery ${banner ? "banner" : ""}`}>
+        <div className="gallery__container">
           <img
             src={pictures[0]}
             alt="Slide 1"
-            className="carousel__image active"
+            className="gallery__image active"
           />
+          {slogan && <h1 className="gallery__title">{slogan}</h1>}
         </div>
       </div>
     )
   }
 
   return (
-    <div className="carousel">
-      <div className="carousel__container">
+    <div className={`gallery ${banner ? "banner" : ""}`}>
+      <div className="gallery__container">
         {pictures.map((picture, index) => (
           <img
             key={index}
             src={picture}
             alt={`Slide ${index + 1}`}
             className={
-              index === currentItem
-                ? "carousel__image active"
-                : "carousel__image"
+              index === currentItem ? "gallery__image active" : "gallery__image"
             }
           />
         ))}
       </div>
-      <div className="carousel__pagination">
+      <div className="gallery__pagination">
         {currentItem + 1} / {pictures.length}
       </div>
-      <button className="carousel__prev" onClick={prev}>
+      <button className="gallery__prev" onClick={prev}>
         Précédent
       </button>
-      <button className="carousel__next" onClick={next}>
+      <button className="gallery__next" onClick={next}>
         Suivant
       </button>
+      {slogan && <h1 className="gallery__title">{slogan}</h1>}
     </div>
   )
 }
 
-export default Carousel
+export default Gallery

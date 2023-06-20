@@ -1,16 +1,14 @@
-import image from '../../assets/banner-a-propos-image.png'
-import Banner from '../../components/Banner'
-import DropdownAPropos from '../../components/DropdownAPropos'
-
+import image from "../../assets/banner-a-propos-image.png"
+import DropdownAPropos from "../../components/DropdownAPropos"
+import Gallery from "../../components/Gallery"
 
 function Apropos() {
-    return (
-      <main>
-        <Banner image={image} slogan={''}/>      
-        <DropdownAPropos /> 
+  return (
+    <main>
+      <Gallery pictures={[image]} banner={true} />
+      <DropdownAPropos />
+    </main>
+  )
+}
 
-      </main>
-    )
-  }
-
-  export default Apropos
+export default Apropos

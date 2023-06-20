@@ -1,15 +1,15 @@
 import "../styles/RentalSheet.scss"
-import Carousel from "./Carousel"
 import { LogementList } from "../datas/LogementList"
 import Dropdown from "./Dropdown"
 import RatingScale from "./RatingScale"
 import HostIdentity from "./HostIdentity"
 import TagList from "./TagList"
+import Gallery from "./Gallery"
 
 function RentalSheet({ sheet }) {
   return (
     <div>
-      <Carousel pictures={LogementList[sheet].pictures} />
+      <Gallery pictures={LogementList[sheet].pictures} />
 
       <section className="rental-sheet">
         <div className="rental-sheet__overview">

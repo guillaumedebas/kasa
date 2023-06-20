@@ -1,15 +1,18 @@
-import image from '../../assets/banner-accueil-image.jpeg'
-import Banner from '../../components/Banner'
-import RentalList from '../../components/RentalList'
+import image from "../../assets/banner-accueil-image.jpeg"
+import Gallery from "../../components/Gallery"
+import RentalList from "../../components/RentalList"
 
 function Accueil() {
-    return (
-      <main>
-        <Banner image={image} slogan={'Chez vous, partout et ailleurs'}/>      
-        <RentalList /> 
+  return (
+    <main>
+      <Gallery
+        pictures={[image]}
+        slogan="Chez vous, partout et ailleurs"
+        banner={true}
+      />
+      <RentalList />
+    </main>
+  )
+}
 
-      </main>
-    )
-  }
-
-  export default Accueil
+export default Accueil
