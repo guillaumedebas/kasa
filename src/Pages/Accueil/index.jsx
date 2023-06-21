@@ -1,11 +1,11 @@
 import image from "../../assets/banner-accueil-image.jpeg"
-import Gallery from "../../components/Gallery"
+import BannerGallery from "../../components/BannerGallery"
 import RentalList from "../../components/RentalList"
 
 function Accueil() {
   return (
     <main>
-      <Gallery
+      <BannerGallery
         pictures={[image]}
         slogan="Chez vous, partout et ailleurs"
         banner={true}

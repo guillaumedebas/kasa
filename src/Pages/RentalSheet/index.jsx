@@ -5,7 +5,7 @@ import Dropdown from "../../components/Dropdown"
 import RatingScale from "../../components/RatingScale"
 import HostIdentity from "../../components/HostIdentity"
 import TagList from "../../components/TagList"
-import Gallery from "../../components/Gallery"
+import BannerGallery from "../../components/BannerGallery"
 import React, { useEffect } from "react"
 
 function searchRental(id) {
@@ -34,7 +34,7 @@ function RentalSheetSelect() {
 
   return (
     <main>
-      <Gallery pictures={rentals[sheet].pictures} />
+      <BannerGallery pictures={rentals[sheet].pictures} />
 
       <section className="rental-sheet">
         <div className="rental-sheet__overview">

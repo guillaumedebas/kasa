@@ -1,5 +1,5 @@
 import image from "../../assets/banner-a-propos-image.png"
-import Gallery from "../../components/Gallery"
+import BannerGallery from "../../components/BannerGallery"
 import "../../styles/APropos.scss"
 import Dropdown from "../../components/Dropdown"
 import { AProposData } from "../../datas/AProposData"
@@ -7,7 +7,7 @@ import { AProposData } from "../../datas/AProposData"
 function Apropos() {
   return (
     <main>
-      <Gallery pictures={[image]} banner={true} />
+      <BannerGallery pictures={[image]} banner={true} />
       <section className="a-propos">
         <Dropdown
           dropdownLabel={AProposData[0].label}

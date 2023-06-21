@@ -1,7 +1,7 @@
 import React, { useState } from "react"
-import "../styles/Gallery.scss"
+import "../styles/BannerGallery.scss"
 
-const Gallery = ({ pictures, slogan, banner }) => {
+const BannerGallery = ({ pictures, slogan, banner }) => {
   const [currentItem, setCurrentItem] = useState(0)
 
   const next = () => {
@@ -55,4 +55,4 @@ const Gallery = ({ pictures, slogan, banner }) => {
   )
 }
 
-export default Gallery
+export default BannerGallery
