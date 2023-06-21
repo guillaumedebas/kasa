@@ -18,9 +18,9 @@ code {
 .main-wrapper {
   padding-top: clamp(20px, 3.125vw, 45px);
   position: relative;
-  min-height: 97.5vh;
   display: flex;
   flex-direction: column;
+  min-height: 99vh;
 
 
 }
@@ -35,6 +35,11 @@ code {
   margin-left: clamp(0px, 6.944vw, 100px);
   margin-bottom: clamp(0px, 2.778vw, 40px);
 }
+
+main {
+  flex-grow: 1;
+}
+
 
 * {
   font-family: 'Montserrat', sans-serif;
