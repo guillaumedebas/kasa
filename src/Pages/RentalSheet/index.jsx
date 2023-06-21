@@ -39,10 +39,15 @@ function RentalSheetSelect() {
       <section className="rental-sheet">
         <div className="rental-sheet__overview">
           <div className="housing">
-            <h2 className="housing__title">{rentals[sheet].title}</h2>
-            <p className="housing__location">{rentals[sheet].location}</p>
+            <div className="housing__main">
+              <h2 className="housing__main__title">{rentals[sheet].title}</h2>
+              <p className="housing__main__location">
+                {rentals[sheet].location}
+              </p>
+            </div>
             <TagList sheet={sheet} />
           </div>
+
           <div className="rental-sheet__host">
             <HostIdentity sheet={sheet} />
             <RatingScale scaleValue={rentals[sheet].rating} />

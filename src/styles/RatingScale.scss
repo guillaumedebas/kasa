@@ -1,6 +1,8 @@
 .rating {
     display: flex;
     justify-content: flex-end;
+    align-items: flex-start;
+    height: clamp(15px, 2.431vw, 35px);
     gap: clamp(6.5px, 1.042vw, 15px);
 
     &__star {
