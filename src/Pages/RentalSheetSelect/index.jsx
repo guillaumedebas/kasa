@@ -1,5 +1,5 @@
 import { useNavigate, useParams } from "react-router-dom"
-import { LogementList } from "../../datas/LogementList"
+import rentals from "../../datas/logements.json"
 import "../../styles/RentalSheet.scss"
 import Dropdown from "../../components/Dropdown"
 import RatingScale from "../../components/RatingScale"
@@ -9,8 +9,8 @@ import Gallery from "../../components/Gallery"
 import React, { useEffect } from "react"
 
 function searchRental(id) {
-  for (let i = 0; i < LogementList.length; i++) {
-    if (LogementList[i].id === id) {
+  for (let i = 0; i < rentals.length; i++) {
+    if (rentals[i].id === id) {
       return i
     }
   }
@@ -34,18 +34,18 @@ function RentalSheetSelect() {
 
   return (
     <main>
-      <Gallery pictures={LogementList[sheet].pictures} />
+      <Gallery pictures={rentals[sheet].pictures} />
 
       <section className="rental-sheet">
         <div className="rental-sheet__overview">
           <div className="housing">
-            <h2 className="housing__title">{LogementList[sheet].title}</h2>
-            <p className="housing__location">{LogementList[sheet].location}</p>
+            <h2 className="housing__title">{rentals[sheet].title}</h2>
+            <p className="housing__location">{rentals[sheet].location}</p>
             <TagList sheet={sheet} />
           </div>
           <div className="rental-sheet__host">
             <HostIdentity sheet={sheet} />
-            <RatingScale scaleValue={LogementList[sheet].rating} />
+            <RatingScale scaleValue={rentals[sheet].rating} />
           </div>
         </div>
 
@@ -53,9 +53,7 @@ function RentalSheetSelect() {
           <Dropdown
             dropdownLabel={"Description"}
             content={
-              <p className="dropdown__content">
-                {LogementList[sheet].description}
-              </p>
+              <p className="dropdown__content">{rentals[sheet].description}</p>
             }
           />
           <Dropdown
@@ -63,17 +61,17 @@ function RentalSheetSelect() {
             content={
               <div className="dropdown__hidden-box__item">
                 <ul>
-                  {LogementList[sheet].equipments
-                    .slice(0, 5)
+                  {rentals[sheet].equipments
+                    .slice(0, 7)
                     .map((equipement, id) => (
                       <li key={id}>{equipement}</li>
                     ))}
                 </ul>
 
-                {LogementList[sheet].equipments.length > 5 && (
+                {rentals[sheet].equipments.length > 7 && (
                   <ul>
-                    {LogementList[sheet].equipments
-                      .slice(5)
+                    {rentals[sheet].equipments
+                      .slice(7)
                       .map((equipement, id) => (
                         <li key={id}>{equipement}</li>
                       ))}

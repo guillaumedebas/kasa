@@ -1,10 +1,10 @@
-import { LogementList } from "../datas/LogementList"
+import rentals from "../datas/logements.json"
 import "../styles/TagList.scss"
 
 function TagList({ sheet }) {
   return (
     <ul className="tag-list">
-      {LogementList[sheet].tags.map((tag, id) => (
+      {rentals[sheet].tags.map((tag, id) => (
         <li key={id} className="tag-list__item">
           {tag}
         </li>

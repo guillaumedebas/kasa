@@ -62,7 +62,7 @@
         }
 
         &--open {
-            height: 116px;
+            height: calc(116px + 2.778vw);
             transition: height 600ms;
             position: relative;
             background-color: #F6F6F6;
@@ -75,11 +75,11 @@
             line-height: 1.2rem;
 
             @media screen and (max-width: 768px) {
-                height: 70px;
+                height: calc(70px + 3.906vw);
             }
 
             @media screen and (max-width: 480px) {
-                height: 150px;
+                height: 165px;
             }
 
             * {
