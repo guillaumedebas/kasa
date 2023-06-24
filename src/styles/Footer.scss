@@ -1,9 +1,8 @@
+@import './settings.scss';
+
 .footer {
     background-color: black;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @include centered-flex-container-column;
     gap: 30px;
     padding: 60px;
 
@@ -11,8 +10,8 @@
 
 
     &__text {
-        color: white;
-        font-size: clamp(0.75rem, 1.667vw, 1.5rem);
+        color: $tertiary-constrast-color;
+        font-size: calc($clamp-5-10rem / 6.66);
         font-weight: 500;
     }
 }

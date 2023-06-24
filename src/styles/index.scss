@@ -18,9 +18,8 @@ code {
 .main-wrapper {
   padding-top: clamp(20px, 3.125vw, 45px);
   position: relative;
-  display: flex;
-  flex-direction: column;
-  min-height: 99vh;
+  @include flex-column;
+  min-height: 100vh;
   max-width: 1920px;
   margin: auto;
 
@@ -33,9 +32,9 @@ code {
 .rental-sheet,
 .gallery,
 .a-propos {
-  margin-right: clamp(0px, 6.944vw, 100px);
-  margin-left: clamp(0px, 6.944vw, 100px);
-  margin-bottom: clamp(0px, 2.778vw, 40px);
+  margin-right: $clamp-0-100px;
+  margin-left: $clamp-0-100px;
+  margin-bottom: calc($clamp-0-100px * 0.4);
 }
 
 main {

@@ -1,8 +1,7 @@
 @import './settings.scss';
 
 .error {
-    display: flex;
-    flex-direction: column;
+    @include flex-column;
     gap: 100px;
     justify-content: space-around;
     align-items: center;
@@ -15,7 +14,7 @@
     }
 
     &__message {
-        font-size: clamp(1.125rem, 2.5vw, 2.25rem);
+        font-size: calc($clamp-5-10rem / 4.44);
         color: $main-color;
         font-weight: 500;
     }

@@ -8,13 +8,9 @@
     &__item {
         background-color: $main-color;
         padding: 5px clamp(25px, 2vw, 30px);
-        color: white;
+        color: $tertiary-constrast-color;
         font-size: clamp(0.625rem, 0.972vw, 0.875rem);
         border-radius: clamp(5px, 0.694vw, 10px);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-
+        @include centered-flex-container;
     }
 }

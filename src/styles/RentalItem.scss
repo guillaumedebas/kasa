@@ -1,19 +1,19 @@
+@import './settings.scss';
+
 .rental {
     aspect-ratio: 1/1;
     border-radius: 10px;
     display: flex;
     align-items: flex-end;
-    padding: clamp(0px, 1.389vw, 20px);
+    padding: calc($clamp-0-100px * 0.2);
     box-sizing: border-box;
     position: relative;
     overflow: hidden;
 
     &::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        z-index: 1;
-        background-color: rgba(0, 0, 0, 0.3);
+        @include before-contrast;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(0, 0, 0, 0.50) 100%);
+
     }
 
     &__background {
@@ -29,7 +29,7 @@
     &__title {
         font-size: clamp(0.875rem, 1.25vw, 1.125rem);
         font-weight: 500;
-        color: white;
+        color: $tertiary-constrast-color;
         z-index: 2;
 
         @media screen and (max-width: 480px) {

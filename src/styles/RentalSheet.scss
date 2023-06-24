@@ -1,8 +1,7 @@
 @import './settings.scss';
 
 .rental-sheet {
-    display: flex;
-    flex-direction: column;
+    @include flex-column;
     gap: clamp(15px, 1.736vw, 25px);
     box-sizing: border-box;
 
@@ -12,15 +11,14 @@
         align-items: flex-end;
 
         @media screen and (max-width: 480px) {
-            flex-direction: column;
+            @include flex-column;
             align-items: flex-start;
             gap: 15px;
         }
     }
 
     &__host {
-        display: flex;
-        flex-direction: column;
+        @include flex-column;
         gap: clamp(15px, 1.736vw, 25px);
 
         @media screen and (max-width: 480px) {
@@ -38,7 +36,7 @@
 
 
         @media screen and (max-width: 768px) {
-            flex-direction: column;
+            @include flex-column;
             gap: 20px;
         }
     }
@@ -47,18 +45,16 @@
 .housing {
     flex-basis: 80%;
     justify-content: flex-start;
-    display: flex;
-    flex-direction: column;
+    @include flex-column;
     gap: clamp(10px, 1.389vw, 20px);
 
     &__main {
-        display: flex;
-        flex-direction: column;
+        @include flex-column;
         gap: clamp(5px, 0.694vw, 10px);
 
         &__title {
             color: $main-color;
-            font-size: clamp(1.125rem, 2.5vw, 2.25rem);
+            font-size: calc($clamp-5-10rem / 4.44);
             font-weight: 500;
         }
 

@@ -1,9 +1,9 @@
+@import './settings.scss';
+
 .gallery {
   aspect-ratio: 1240 / 415;
   overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include centered-flex-container;
   position: relative;
   border-radius: 25px;
 
@@ -22,20 +22,7 @@
     }
 
     &::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      z-index: 1;
-      background-color: rgba(0, 0, 0, 0.3);
-    }
-
-    &__background {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      position: absolute;
-      top: 0;
-      left: 0;
+      @include before-contrast;
     }
 
     .gallery__container {
@@ -44,16 +31,15 @@
   }
 
   &__title {
-    color: white;
+    color: $tertiary-constrast-color;
     font-family: 'Montserrat', sans-serif;
-    font-size: clamp(1.5rem, 3.333vw, 3rem);
+    font-size: calc($clamp-5-10rem / 3.33);
     position: absolute;
     z-index: 30;
     text-align: center;
 
 
     @media screen and (max-width: 480px) {
-
       text-align: left;
       max-width: 14ch;
       transform: translateX(-25px);
@@ -65,9 +51,7 @@
     border-radius: 25px;
     width: 100%;
     height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center; // Ajout de cette propriété
+    @include centered-flex-container;
     overflow: hidden;
   }
 
@@ -116,7 +100,7 @@
     right: 0;
     text-align: center;
     display: block;
-    color: white;
+    color: $tertiary-constrast-color;
     font-size: clamp(0.875rem, 1.25vw, 1.125rem);
     font-family: Montserrat;
     font-weight: 500;

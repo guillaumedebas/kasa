@@ -1,8 +1,8 @@
+@import './settings.scss';
+
+
 .a-propos {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
+  @include centered-flex-container-column;
   gap: clamp(20px, 2.083vw, 30px);
   padding-left: 10%;
   padding-right: 10%;

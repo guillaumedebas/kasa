@@ -1,7 +1,42 @@
 $main-color: #FF6060;
+$secondary-background-color: #F6F6F6;
+$tertiary-constrast-color: white;
+
+$clamp-0-100px: clamp(0px, 6.944vw, 100px);
+$clamp-5-10rem: clamp(5rem, 11.111vw, 10rem);
+
+$clamp-07-1rem: clamp(0.75rem, 1.25vw, 1.125rem);
+
 
 @mixin default-text($fontSize) {
     font-size: $fontSize;
     color: $main-color;
 }
 
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin centered-container {
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin centered-flex-container {
+    display: flex;
+    @include centered-container;
+}
+
+@mixin centered-flex-container-column {
+    @include flex-column;
+    @include centered-container;
+}
+
+@mixin before-contrast {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.3);
+}

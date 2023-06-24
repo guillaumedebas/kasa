@@ -6,12 +6,9 @@
     height: auto;
     border-radius: 5px;
 
-    &__background {
-        &--open {
-            background-color: #F6F6F6;
-        }
+    &__background--open {
+        background-color: $secondary-background-color;
     }
-
 
     &__title {
         background-color: $main-color;
@@ -25,20 +22,19 @@
         box-sizing: border-box;
 
         &__label {
-            color: white;
+            color: $tertiary-constrast-color;
             font-size: clamp(0.813rem, 1.25vw, 1.125rem);
         }
 
-        &__handle {
+        &__handle,
+        &__handle--open {
             width: clamp(16px, 1.667vw, 24px);
             transition: transform 600ms;
             margin: clamp(2px, 0.625vw, 9px);
+            cursor: pointer;
 
             &--open {
-                margin: clamp(2px, 0.625vw, 9px);
-                transition: transform 600ms;
                 transform: rotate(-180deg);
-                width: clamp(16px, 1.667vw, 24px);
             }
         }
     }
@@ -46,13 +42,13 @@
     &__hidden-box {
         transition: height 600ms;
         height: 0px;
-        background-color: #F6F6F6;
+        background-color: $secondary-background-color;
         overflow: hidden;
 
         * {
             z-index: -1;
             color: $main-color;
-            font-size: clamp(0.75rem, 1.25vw, 1.125rem);
+            font-size: $clamp-07-1rem;
             font-weight: 400;
             padding: 20px;
             line-height: 1.2rem;
@@ -63,16 +59,17 @@
 
         &--open {
             height: calc(116px + 2.778vw);
-            transition: height 600ms;
             position: relative;
-            background-color: #F6F6F6;
             display: flex;
             z-index: 9;
             color: $main-color;
-            font-size: clamp(0.75rem, 1.25vw, 1.125rem);
+            font-size: $clamp-07-1rem;
             font-weight: 400;
             padding: 20px;
             line-height: 1.2rem;
+            transition: height 600ms;
+
+
 
             @media screen and (max-width: 768px) {
                 height: calc(70px + 3.906vw);
@@ -83,17 +80,15 @@
             }
 
             * {
-                transition: transform 500ms 100ms;
+                transition: transform 400ms 200ms;
                 transform: translateY(0px);
                 z-index: -1;
                 align-self: center;
-
             }
 
             ul {
                 align-self: flex-start;
             }
-
         }
 
         &__item {
@@ -106,5 +101,4 @@
             z-index: -10;
         }
     }
-
 }

@@ -8,7 +8,7 @@
 
     &__name {
         color: $main-color;
-        font-size: clamp(0.75rem, 1.25vw, 1.125rem);
+        font-size: $clamp-07-1rem;
         font-weight: 500;
         max-width: 10ch;
         text-align: end;
