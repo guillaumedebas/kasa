@@ -8,12 +8,18 @@ import TagList from "../../components/TagList"
 import BannerGallery from "../../components/BannerGallery"
 import React, { useEffect, useState } from "react"
 
+/**
+ * RentalSheet page.
+ * Displays the details of a specific rental sheet.
+ */
+
 function RentalSheet() {
   const { id } = useParams()
   const navigate = useNavigate()
   const [sheet, setSheet] = useState(null)
 
   useEffect(() => {
+    // Search for the rental sheet based on the id parameter
     function searchRental(id) {
       for (let i = 0; i < rentals.length; i++) {
         if (rentals[i].id === id) {
@@ -24,7 +30,7 @@ function RentalSheet() {
     }
 
     const sheet = searchRental(id)
-
+    // Redirect to error page if the sheet is not found
     if (sheet === -1) {
       navigate("/error")
     } else {

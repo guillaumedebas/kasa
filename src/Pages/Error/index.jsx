@@ -1,6 +1,11 @@
 import { Link } from "react-router-dom"
 import "../../styles/Error.scss"
 
+/**
+ * Error component.
+ * Displays a 404 error page.
+ */
+
 function Error() {
   return (
     <main className="error">

@@ -2,6 +2,14 @@ import dropdownHandle from "../assets/dropdown-handle.svg"
 import "../styles/Dropdown.scss"
 import { useState } from "react"
 
+/**
+ * Dropdown component.
+ *
+ * Props:
+ * - dropdownLabel: the label text for the dropdown.
+ * - content: the content to display when the dropdown is open.
+ */
+
 function Dropdown({ dropdownLabel, content }) {
   const [classNameSuffixValue, modifyClassNameSuffixValue] = useState("")
   const [isOpen, modifyOpen] = useState(false)
@@ -10,6 +18,11 @@ function Dropdown({ dropdownLabel, content }) {
       {content}
     </div>
   )
+
+  /**
+   * Function to control rotation of the handle
+   * and to toggle the open/closed state of the dropdown.
+   */
 
   function dropdownRotate() {
     if (classNameSuffixValue === "") {

@@ -4,6 +4,11 @@ import "../../styles/APropos.scss"
 import Dropdown from "../../components/Dropdown"
 import { AProposData } from "../../datas/AProposData"
 
+/**
+ * Apropos component.
+ * Renders the About Us page.
+ */
+
 function Apropos() {
   return (
     <main>

@@ -2,6 +2,11 @@ import "../styles/Header.scss"
 import logoKasa from "../assets/logo-kasa.svg"
 import { Link } from "react-router-dom"
 
+/**
+ * Hearder component.
+ * Displays the header section of the website.
+ */
+
 function Header() {
   return (
     <header className="header">

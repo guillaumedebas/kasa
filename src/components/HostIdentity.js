@@ -1,6 +1,14 @@
 import rentals from "../datas/logements.json"
 import "../styles/HostIdentity.scss"
 
+/**
+ * HostIdentity component.
+ * Displays the host's identity information.
+ *
+ * Props:
+ * - sheet: the index of the rental sheet to display.
+ */
+
 function HostIdentity({ sheet }) {
   return (
     <div className="identity">
