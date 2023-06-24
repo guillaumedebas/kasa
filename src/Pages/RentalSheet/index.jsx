@@ -6,30 +6,34 @@ import RatingScale from "../../components/RatingScale"
 import HostIdentity from "../../components/HostIdentity"
 import TagList from "../../components/TagList"
 import BannerGallery from "../../components/BannerGallery"
-import React, { useEffect } from "react"
+import React, { useEffect, useState } from "react"
 
-function searchRental(id) {
-  for (let i = 0; i < rentals.length; i++) {
-    if (rentals[i].id === id) {
-      return i
-    }
-  }
-  return -1
-}
-
-function RentalSheetSelect() {
+function RentalSheet() {
   const { id } = useParams()
   const navigate = useNavigate()
-  const sheet = searchRental(id)
+  const [sheet, setSheet] = useState(null)
 
   useEffect(() => {
+    function searchRental(id) {
+      for (let i = 0; i < rentals.length; i++) {
+        if (rentals[i].id === id) {
+          return i
+        }
+      }
+      return -1
+    }
+
+    const sheet = searchRental(id)
+
     if (sheet === -1) {
       navigate("/error")
+    } else {
+      setSheet(sheet)
     }
-  }, [navigate, sheet])
+  }, [id, navigate])
 
-  if (sheet === -1) {
-    return null // Retourne null si la navigation est effectuée vers le composant Error
+  if (sheet === null) {
+    return null
   }
 
   return (
@@ -91,4 +95,4 @@ function RentalSheetSelect() {
   )
 }
 
-export default RentalSheetSelect
+export default RentalSheet
