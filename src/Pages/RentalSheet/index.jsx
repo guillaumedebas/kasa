@@ -7,6 +7,7 @@ import HostIdentity from "../../components/HostIdentity"
 import TagList from "../../components/TagList"
 import BannerGallery from "../../components/BannerGallery"
 import React, { useEffect, useState } from "react"
+import HousingSummary from "../../components/HousingSummary"
 
 /**
  * RentalSheet page.
@@ -48,17 +49,12 @@ function RentalSheet() {
 
       <section className="rental-sheet">
         <div className="rental-sheet__overview">
-          <div className="housing">
-            <div className="housing__main">
-              <h2 className="housing__main__title">{rentals[sheet].title}</h2>
-              <p className="housing__main__location">
-                {rentals[sheet].location}
-              </p>
-            </div>
+          <div className="rental-sheet__overview__housing">
+            <HousingSummary sheet={sheet} />
             <TagList sheet={sheet} />
           </div>
 
-          <div className="rental-sheet__host">
+          <div className="rental-sheet__overview__host">
             <HostIdentity sheet={sheet} />
             <RatingScale scaleValue={rentals[sheet].rating} />
           </div>

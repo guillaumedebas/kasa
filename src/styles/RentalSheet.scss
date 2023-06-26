@@ -15,17 +15,24 @@
             align-items: flex-start;
             gap: 15px;
         }
-    }
 
-    &__host {
-        @include flex-column;
-        gap: clamp(15px, 1.736vw, 25px);
+        &__housing {
+            flex-basis: 80%;
+            justify-content: flex-start;
+            @include flex-column;
+            gap: clamp(10px, 1.389vw, 20px);
+        }
 
-        @media screen and (max-width: 480px) {
-            width: 100%;
-            flex-direction: row-reverse;
-            justify-content: space-between;
-            align-items: center;
+        &__host {
+            @include flex-column;
+            gap: clamp(15px, 1.736vw, 25px);
+
+            @media screen and (max-width: 480px) {
+                width: 100%;
+                flex-direction: row-reverse;
+                justify-content: space-between;
+                align-items: center;
+            }
         }
     }
 
@@ -33,36 +40,9 @@
         display: flex;
         gap: clamp(20px, 5.278vw, 76px);
 
-
-
         @media screen and (max-width: 768px) {
             @include flex-column;
             gap: 20px;
         }
     }
-}
-
-.housing {
-    flex-basis: 80%;
-    justify-content: flex-start;
-    @include flex-column;
-    gap: clamp(10px, 1.389vw, 20px);
-
-    &__main {
-        @include flex-column;
-        gap: clamp(5px, 0.694vw, 10px);
-
-        &__title {
-            color: $main-color;
-            font-size: calc($clamp-5-10rem / 4.44);
-            font-weight: 500;
-        }
-
-        &__location {
-            color: $main-color;
-            font-size: clamp(0.875rem, 1.25vw, 1.125rem);
-            font-weight: 500;
-        }
-    }
-
 }

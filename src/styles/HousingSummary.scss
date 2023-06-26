@@ -1,0 +1,18 @@
+@import './settings.scss';
+
+.housing-summary {
+    @include flex-column;
+    gap: clamp(5px, 0.694vw, 10px);
+
+    &__title {
+        color: $main-color;
+        font-size: calc($clamp-5-10rem / 4.44);
+        font-weight: 500;
+    }
+
+    &__location {
+        color: $main-color;
+        font-size: clamp(0.875rem, 1.25vw, 1.125rem);
+        font-weight: 500;
+    }
+}
