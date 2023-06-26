@@ -1,7 +1,7 @@
 @import './settings.scss';
 
 .footer {
-    background-color: black;
+    background-color: $footer-color;
     @include centered-flex-container-column;
     gap: 30px;
     padding: 60px;
