@@ -10,6 +10,28 @@
 
   .navbar__logo {
     margin-right: auto;
+
+    &__title {
+      position: relative;
+      color: white;
+      width: clamp(101.7px, 14.125vw ,203.4px);
+      height: clamp(43px, 4.306vw, 62px);
+      
+     
+     
+      &__svg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: clamp(101.7px, 14.125vw ,203.4px);
+        height: clamp(43px, 4.306vw, 62px);
+        background-image: url('../assets/logo-kasa.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        pointer-events: none;
+      }
+    }
   }
 
   &__link {
@@ -20,9 +42,5 @@
     &:hover {
       text-decoration: underline;
     }
-  }
-
-  &__logo__svg {
-    height: clamp(43px, 4.306vw, 62px);
   }
 }

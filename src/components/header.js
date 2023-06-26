@@ -1,5 +1,5 @@
 import "../styles/Header.scss"
-import logoKasa from "../assets/logo-kasa.svg"
+// import logoKasa from "../assets/logo-kasa.svg"
 import { Link } from "react-router-dom"
 
 /**
@@ -12,11 +12,16 @@ function Header() {
     <header className="header">
       <nav className="navbar">
         <Link className="navbar__logo" to="/">
-          <img
+          <h1 className="navbar__logo__title">
+            Kasa
+            <span class="navbar__logo__title__svg"></span>
+          </h1>
+
+          {/* <img
             src={logoKasa}
             alt="logo de Kasa"
             className="navbar__logo__svg"
-          />
+          /> */}
         </Link>
         <Link className="navbar__link" to="/">
           Accueil
