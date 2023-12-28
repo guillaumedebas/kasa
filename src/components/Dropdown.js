@@ -1,6 +1,7 @@
 import dropdownHandle from "../assets/dropdown-handle.svg"
 import "../styles/Dropdown.scss"
 import { useState } from "react"
+import PropTypes from "prop-types"
 
 /**
  * Dropdown component.
@@ -55,5 +56,9 @@ function Dropdown({ dropdownLabel, content }) {
     </div>
   )
 }
+Dropdown.propTypes = {
+  dropdownLabel: PropTypes.string.isRequired,
+  content: PropTypes.node.isRequired 
+};
 
 export default Dropdown

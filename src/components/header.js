@@ -14,7 +14,7 @@ function Header() {
         <Link className="navbar__logo" to="/">
           <h1 className="navbar__logo__title">
             Kasa
-            <span class="navbar__logo__title__svg"></span>
+            <span className="navbar__logo__title__svg"></span>
           </h1>
 
           {/* <img

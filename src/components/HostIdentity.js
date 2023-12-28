@@ -1,4 +1,5 @@
 import rentals from "../datas/logements.json"
+import PropTypes from 'prop-types'
 import "../styles/HostIdentity.scss"
 
 /**
@@ -21,5 +22,8 @@ function HostIdentity({ sheet }) {
     </div>
   )
 }
+HostIdentity.propTypes = {
+  sheet: PropTypes.number.isRequired,
+};
 
 export default HostIdentity

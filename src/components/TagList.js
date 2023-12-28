@@ -1,4 +1,5 @@
 import rentals from "../datas/logements.json"
+import PropTypes from 'prop-types'
 import "../styles/TagList.scss"
 
 /**
@@ -20,5 +21,8 @@ function TagList({ sheet }) {
     </ul>
   )
 }
+TagList.propTypes = {
+  sheet: PropTypes.number.isRequired,
+};
 
 export default TagList

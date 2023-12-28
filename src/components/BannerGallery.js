@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import PropTypes from "prop-types"
 import "../styles/BannerGallery.scss"
 
 /**
@@ -67,5 +68,10 @@ const BannerGallery = ({ pictures, slogan, banner }) => {
     </div>
   )
 }
+BannerGallery.propTypes = {
+  pictures: PropTypes.arrayOf(PropTypes.string).isRequired,
+  slogan: PropTypes.string,
+  banner: PropTypes.bool
+};
 
 export default BannerGallery

@@ -1,5 +1,6 @@
 import fullStar from "../assets/full-star.svg"
 import emptyStar from "../assets/empty-star.svg"
+import PropTypes from 'prop-types'
 import "../styles/RatingScale.scss"
 
 /**
@@ -37,5 +38,8 @@ function RatingScale({ scaleValue }) {
     </div>
   )
 }
+RatingScale.propTypes = {
+  scaleValue: PropTypes.string.isRequired,
+};
 
 export default RatingScale

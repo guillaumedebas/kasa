@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom"
+import PropTypes from 'prop-types'
 import "../styles/RentalItem.scss"
 
 /**
@@ -20,5 +21,10 @@ function RentalItem({ title, cover, id }) {
     </Link>
   )
 }
+RentalItem.propTypes = {
+  title: PropTypes.string.isRequired,
+  cover: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired
+};
 
 export default RentalItem
